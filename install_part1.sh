@@ -90,7 +90,8 @@ mkdir -p /mnt/root
 } > /mnt/root/.install_env
 chmod 600 /mnt/root/.install_env
 
-cp install_part2.sh /mnt/install_part2.sh
+# install_part2.sh はローカルには置かず、GitHubから直接取得する
+curl -fsSL "https://raw.githubusercontent.com/chise842/my-arch-setup/main/install_part2.sh" -o /mnt/install_part2.sh
 chmod +x /mnt/install_part2.sh
 
 echo "=== chroot環境に移行して自動セットアップを続行します ==="
